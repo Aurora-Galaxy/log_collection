@@ -21,4 +21,4 @@
 │  └─test_tailf
 └─utils
 ```
-
+logAgent 和 LogTransfer 应该分开部署
