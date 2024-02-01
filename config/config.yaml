@@ -1,0 +1,27 @@
+kafka:
+  producer:
+    host: 127.0.0.1
+    port: 9092
+    chanMaxSize: 100000 # 指定生产者chan的缓冲区大小
+  consumer:
+    host: 127.0.0.1
+    port: 9092
+    chanMaxSize: 100000 # 指定消费者chan的缓冲区大小
+
+etcd:
+#  字段logagent 不能包含大写字母
+  logagent:
+    host: 127.0.0.1
+    port: 2379
+    timeOut: 5    # 设置超时时间
+    key: /logagent/%s/collect_log
+  logtransfer:
+    host: 127.0.0.1
+    port: 2379
+    timeOut: 5
+    key: /logtransfer/%s/collect_log
+    size: 16     # etcd 中topicchan的缓存大小
+
+elasticsearch:
+  host: 127.0.0.1
+  port: 9200
